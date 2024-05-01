@@ -57,6 +57,7 @@ def main():
         # identity matrix
         # T = np.identity(2)
 
+        # render(S)
         # render(R @ S)
         render(S @ R)
 

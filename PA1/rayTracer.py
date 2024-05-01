@@ -263,6 +263,9 @@ def main():
                             # Lambertian
                             if best_sphere.shader.s_type == 'Lambertian':
                                 L += best_sphere.shader.diffuseColor * light.intensity * max(0, np.dot(surface_normal, l))
+                                # if best_sphere.shader.name == "blue":
+                                #     print(L)
+                                #     pdb.set_trace()
                             elif best_sphere.shader.s_type == 'Phong':
                                 L += best_sphere.shader.diffuseColor * light.intensity * max(0, np.dot(surface_normal, l))
 
@@ -281,7 +284,7 @@ def main():
 
     rawimg = Image.fromarray(img, 'RGB')
     #rawimg.save('out.png')
-    rawimg.save(sys.argv[1]+'.png')
+    rawimg.save(sys.argv[1]+'_test.png')
     
 if __name__=="__main__":
     main()

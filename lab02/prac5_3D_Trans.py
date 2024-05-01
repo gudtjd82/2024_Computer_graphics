@@ -65,11 +65,14 @@ def main():
                       [0., 0., 1., .2],
                       [0., 0., 0., 1.]])
 
+        I = np.identity(4)
+
         camAng = t
 
         # render(R, camAng)
         # render(T, camAng)
         # render(T @ R, camAng)
+        render(I, camAng)
         # render(R @ T, camAng)
 
         glfw.swap_buffers(window)
